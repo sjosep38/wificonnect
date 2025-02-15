@@ -11,8 +11,7 @@
       margin: 0 auto;
       padding: 20px;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      
+      background-color: #ffffff;  
     }
     .logo-placeholder img {
     display: block; 
@@ -21,7 +20,6 @@
     .logo-placeholder:not(:has(img[src])) {
     display: none;
     }
-
     .payment-channels {
       width: 100%;
       height: 100px;
@@ -53,10 +51,11 @@
       padding: 15px;
     }
     .price {
-      flex: 1;
+      flex: 0;
       font-size: 25px;
       font-weight: bold;
       color: #333;
+	  margin-right: 20px;
     }
     .description {
       flex: 2;
@@ -79,7 +78,7 @@
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-	  display: NONE;
+	  display: none;
     }
     .pay-button .btn:hover {
       background-color: #0cc00 !important;
