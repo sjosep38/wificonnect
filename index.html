@@ -11,7 +11,7 @@
       margin: 0 auto;
       padding: 20px;
       font-family: Arial, sans-serif;
-      	
+      	 background: linear-gradient(0deg, rgba(237,127,127,1) 0%, rgba(187,88,189,1) 53%, rgba(106,191,189,1) 100%);    
 
     }
     .logo-placeholder img {
@@ -85,6 +85,104 @@
     .pay-button .btn:hover {
       background-color: #0cc00 !important;
     }
+	
+	
+	/* Modal Dialog */
+.modal-dialog {
+    max-width: 500px; /* Control modal width */
+    margin: 30px auto; /* Center modal vertically and horizontally */
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #007bff; /* Blue background for header */
+    color: white; /* White text for title */
+    border-bottom: 1px solid #ddd; /* Light border under header */
+}
+
+/* Modal Title */
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Close Button */
+.modal-header .btn-close {
+    background-color: transparent; 
+    border: none; /* Remove border */
+    color: white; /* White color for close button */
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the body */
+}
+
+/* Mobile Number Input */
+#mobileNumber {
+    font-size: 1.1rem; /* Slightly larger font size */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border around the input */
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Invalid Feedback */
+.invalid-feedback {
+    color: red;
+    font-size: 0.875rem;
+    display: none; /* Hidden by default */
+}
+
+/* Modal Footer */
+.modal-footer {
+    background-color: #f1f1f1; /* Light background for footer */
+    border-top: 1px solid #ddd; /* Light border above footer */
+}
+
+/* Footer Button Styles */
+.modal-footer .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Primary Button */
+.modal-footer .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Secondary Button */
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 10px; /* Adjust margin for smaller screens */
+        width: 100%; /* Full width on small devices */
+    }
+
+    .modal-body {
+        padding: 15px; /* Adjust padding on small screens */
+    }
+}
+
   </style>
 </head>
 <body>
