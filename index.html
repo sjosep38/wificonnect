@@ -11,8 +11,8 @@
       margin: 0 auto;
       padding: 20px;
       font-family: Arial, sans-serif;
-      background-color: #efecec;
-      
+      /*background-color: #ffffff;  */
+	
     }
     .logo-placeholder img {
     display: block; 
@@ -21,11 +21,10 @@
     .logo-placeholder:not(:has(img[src])) {
     display: none;
     }
-
     .payment-channels {
       width: 100%;
       height: 100px;
-      margin-bottom: 2px;
+      margin-bottom: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -35,7 +34,7 @@
       height: auto;
     }
     .card {
-      margin-bottom: 5px;
+      margin-bottom: 7px;
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
@@ -53,29 +52,27 @@
       padding: 15px;
     }
     .price {
-      flex: 1;
-      font-size: 28px;
+      flex: .9;
+      font-size: 25px;
       font-weight: bold;
-      color: orange;
-      text-align: center;
+      /*color: #333;*/
+	  color: orange;
     }
     .description {
       flex: 2;
-      padding: 0 15px;
-      text-align: left;
+      padding: 0 5px;
     }
     .description h5 {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: bold;
       margin-bottom: 5px;
-      color: blue;
-      text-align: left;
+     /*color: #333;*/
+	  color: blue;
     }
     .description p {
-      font-size: 12px;
+      font-size: 14px;
       color: #666;
       margin: 0;
-      text-align: left;
     }
     .pay-button .btn {
       border: none;
@@ -83,9 +80,11 @@
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+	  display: block;
+	  background-color: blue;
     }
     .pay-button .btn:hover {
-      background-color: #d54bb !important;
+      background-color: #0cc00 !important;
     }
   </style>
 </head>
