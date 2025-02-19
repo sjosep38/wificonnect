@@ -36,41 +36,86 @@
     }
 
     .form-select {
-      font-size: 1rem;
+	  font-size: 1.5rem;
       padding: 10px;
     }
+/* General Container Styles */
+.mobile-number-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top:3px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    /* Style for the mobile number input container */
-    .mobile-number-container {
-      display: none;
-      max-width: 500px;
-      margin: 20px auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+/* Title Styles */
+.mobile-number-container  {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
 
-    /* Custom button styles */
-    .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
-    }
+/* Input Field Styles */
+#mobileNumber {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
 
-    .btn-primary:hover {
-      background-color: #0056b3;
-      border-color: #004085;
-    }
+#mobileNumber:focus {
+  outline: none;
+  border-color: #a739f0;
+}
 
-    /* Error feedback styling */
-    .invalid-feedback {
-      color: #e74a3b;
-    }
-    
-    /* Centering elements inside containers */
-    .text-center {
-      text-align: center;
-    }
+/* Invalid Feedback */
+.invalid-feedback {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: none; /* Initially hidden */
+}
+
+/* Button Styles */
+#submitMobileNumber {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#submitMobileNumber:hover {
+  background: linear-gradient(0deg, rgba(167,39,240,1) 0%, rgba(31,104,186,1) 100%);
+}
+
+/* Button: Disabled State */
+#submitMobileNumber:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+/* Form Section Styling */
+form {
+  margin-top: 20px;
+}
+
+/* Centering the form */
+.text-center {
+  text-align: center;
+}
+
+
+
 
   </style>
 </head>
@@ -82,6 +127,8 @@
   <div class="container voucher-container">
     <label for="voucherOptions" class="form-label">Select a Voucher</label>
     <select class="form-select" id="voucherOptions" aria-label="Voucher Options">
+	  <option value="">Select Promo </option>
+      
       <option value="5">₱5 - 1 MONTH, Unlimited Internet</option>
       <option value="299">₱299 - 1 MONTH, Unlimited Internet</option>
     </select>
@@ -92,14 +139,14 @@
     <h4 class="text-center">Enter Your Mobile Number</h4>
     <form id="mobileNumberForm">
       <div class="mb-3 text-center">
-        <input type="text" class="form-control" id="mobileNumber" placeholder="09XXXXXXXXX" required>
+        <input type="text" class="form-control" id="mobileNumber" placeholder="09227823014" required>
         <div class="invalid-feedback">Please enter a valid Philippine mobile number.</div>
       </div>
       <input type="hidden" id="amount" name="amount">
       <input type="hidden" id="token-value" name="token" value="s0bGPkvsE6PA7xTO18kwLrrdn">
       <div class="text-center">
         <!--<button type="button" class="btn btn-primary" id="submitMobileNumber">Submit</button> -->
-		 <button id="submitMobileNumber" class="btn btn-block btn-success" style="background: linear-gradient(0deg, rgba(167,39,240,0.6867121848739496) 0%, rgba(31,104,186,0.6643032212885154) 100%);">CONNECT</button>
+		 <button id="submitMobileNumber" class="btn btn-block btn-success" style="background: linear-gradient(0deg, rgba(167,39,240,0.6867121848739496) 0%, rgba(31,104,186,0.6643032212885154) 100%);">Buy Voucher Now</button>
 				
       </div>
     </form>
