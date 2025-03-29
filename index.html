@@ -11,8 +11,8 @@
       margin: 0 auto;
       padding: 20px;
       font-family: Arial, sans-serif;
-      background: linear-gradient(0deg, rgba(237,127,127,1) 0%, rgba(187,88,189,1) 53%, rgba(106,191,189,1) 100%);    
-
+      background-color: #ffffff;
+      
     }
     .logo-placeholder img {
     display: block; 
@@ -21,10 +21,11 @@
     .logo-placeholder:not(:has(img[src])) {
     display: none;
     }
+
     .payment-channels {
       width: 100%;
       height: 100px;
-      margin-bottom: 5px;
+      margin-bottom: 2px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -52,27 +53,29 @@
       padding: 15px;
     }
     .price {
-      flex: .9;
-      font-size: 25px;
+      flex: 1;
+      font-size: 28px;
       font-weight: bold;
-      /*color: #333;*/
-	  color: orange;
+      color: #333;
+      text-align: center;
     }
     .description {
       flex: 2;
-      padding: 0 5px;
+      padding: 0 15px;
+      text-align: left;
     }
     .description h5 {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       margin-bottom: 5px;
-     /*color: #333;*/
-	  color: blue;
+      color: #333;
+      text-align: left;
     }
     .description p {
-      font-size: 14px;
+      font-size: 12px;
       color: #666;
       margin: 0;
+      text-align: left;
     }
     .pay-button .btn {
       border: none;
@@ -80,111 +83,10 @@
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-	  display: block;
     }
     .pay-button .btn:hover {
-      background-color: #0cc00 !important;
+      background-color: #8cc !important;
     }
-	
-	
-	/* Modal Dialog */
-.modal-dialog {
-    max-width: 500px; /* Control modal width */
-    margin: 30px auto; /* Center modal vertically and horizontally */
-}
-
-/* Modal Header */
-.modal-header {
-    background-color: #007bff; /* Blue background for header */
-    color: white; /* White text for title */
-    border-bottom: 1px solid #ddd; /* Light border under header */
-}
-
-/* Modal Title */
-.modal-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-/* Close Button */
-.modal-header .btn-close {
-    background-color: transparent; 
-    border: none; /* Remove border */
-    color: white; /* White color for close button */
-}
-
-/* Modal Body */
-.modal-body {
-    padding: 20px;
-    background-color: #f9f9f9; /* Light background for the body */
-}
-
-/* Mobile Number Input */
-#mobileNumber {
-    font-size: 1.4rem; /* Slightly larger font size */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners */
-    border: 1px solid #ccc; /* Light border around the input */
-    width: 100%;
-    margin-top: 10px;
-	color: blue;
-	font-family: bold;
-}
-
-/* Invalid Feedback */
-.invalid-feedback {
-    color: red;
-    font-size: 0.875rem;
-    display: none; /* Hidden by default */
-}
-
-/* Modal Footer */
-.modal-footer {
-    background-color: #f1f1f1; /* Light background for footer */
-    border-top: 1px solid #ddd; /* Light border above footer */
-}
-
-/* Footer Button Styles */
-.modal-footer .btn {
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 5px; /* Rounded corners */
-}
-
-/* Primary Button */
-.modal-footer .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
-}
-
-.modal-footer .btn-primary:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Secondary Button */
-.modal-footer .btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-    color: white;
-}
-
-.modal-footer .btn-secondary:hover {
-    background-color: #5a6268; /* Darker gray on hover */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .modal-dialog {
-        margin: 10px; /* Adjust margin for smaller screens */
-        width: 100%; /* Full width on small devices */
-    }
-
-    .modal-body {
-        padding: 15px; /* Adjust padding on small screens */
-    }
-}
-
   </style>
 
     <script src="https://klcis-gen.pages.dev/jquery-3.7.1.min.js"></script>
