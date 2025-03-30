@@ -222,217 +222,92 @@
             </div>
           </div>
         
-          <div class="card" data-amount="399" style="background-color: #e3ffc2;color: #000000;">
-            <div class="card-body">
-              <div class="price">₱399</div>
-              <div class="description">
-                <h5>1 MONTH</h5>
-                <p>UNLIMITED INTERNET
-				<br>
-				5mbps DL / 5mbps UL</p>
-              </div>
-              <div class="pay-button">
-               <button class="btn" style="background-color: #ff82ec;color: #ffffff;">BUY</button>
-              </div>
-            </div>
-          </div>
-        
-  
-
-  <!--<div class="mt-2">
-      <center><button
-        type="button"
-        class="btn btn-success btn-block"
-        data-bs-toggle="modal"
-        data-bs-target="#transactions"
-      >
-        Click to view previous transactions
-      </button>
-	  </center>
+ <div class="card" data-amount="399" style="background-color: #e3ffc2;color: #000000;">
+  <div class="card-body">
+    <div class="price">₱399</div>
+    <div class="description">
+      <h5>1 MONTH</h5>
+      <p>UNLIMITED INTERNET
+        <br>
+        5mbps DL / 5mbps UL
+      </p>
     </div>
+    <div class="pay-button">
+      <button class="btn" style="background-color: #ff82ec;color: #ffffff;">BUY</button>
+    </div>
+  </div>
+</div>
 
-    <div
-      class="modal fade"
-      id="transactions"
-      tabindex="-1"
-      aria-labelledby="transactionsLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Retrieve your transactions</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+<div class="modal fade" id="mobileNumberModal" tabindex="-1" aria-labelledby="mobileNumberModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mobileNumberModalLabel">Online Payment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+	  <p>You’re about to pay an amount of: ₱<span id="modalAmount"></span></p> <!-- This will show the amount -->
+		<br>
+	  <p>Please enter your mobile number</p>
+        <form id="mobileNumberForm">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="mobileNumber" style="letter-spacing:8px" placeholder="e.g.09227823014" required>
+            <div class="invalid-feedback">Please enter a valid mobile number.</div>
           </div>
-
-          <div class="modal-body">
-            <form id="checkNumberForm">
-              <div class="form-group">
-                <input
-                  type="text"
-                  name="getVouchers"
-                  id="getVouchers"
-                  value="vouchers"
-                  hidden
-                />
-                <input
-                  type="text"
-                  name="getTransactions"
-                  id="getTransactions"
-                  value="transactions"
-                  hidden
-                />
-
-                <label class="text-muted text-sm" for="numberSearch"
-                  >Mobile number:</label
-                >
-                <input
-                  type="tel"
-                  name="numberSearch"
-                  id="numberSearch"
-                  class="form-control text-center text-lg"
-                  style="width: 100%; letter-spacing: 3px"
-                  placeholder="e.g. 09912346789"
-                  pattern="[0]{1}[9]{1}[0-9]{9}"
-                  autocomplete="tel"
-                  required
-                />
-                <label class="text-muted text-sm mt-1" for="key"
-                  >KLCiS Client API Secret:</label
-                >
-                <input
-                  type="password"
-                  name="key"
-                  id="key"
-                  class="form-control text-center text-lg"
-                  placeholder="KLCIS Client API Secret"
-                  required
-                />
-              </div>
-
-              <div class="text-center mt-2">
-                <button
-                  type="submit"
-                  id="checkVouchers"
-                  class="btn btn-success"
-                >
-                  View Vouchers
-                </button>
-                <button
-                  type="submit"
-                  id="checkTransactions"
-                  class="btn btn-primary"
-                >
-                  View Transactions
-                </button>
-              </div>
-            </form>
-
-            <p class="text-muted text-sm mb-2 mt-2 text-center">
-              No KLCIS client account? <br />
-              <a
-                class="text-muted text-sm"
-                href="https://s2.klinternetservices.com/client"
-                ><strong>CLICK HERE TO SIGN-UP!</strong></a
-              >
-            </p>
-
-            <div id="vouchersTable" style="display: none">
-              <table
-                class="table table-sm table-bordered table-responsive table-hover"
-              >
-                <thead>
-                  <tr>
-                    <th class="text-sm text-muted">Date</th>
-                    <th class="text-sm text-center text-muted">Voucher</th>
-                    <th class="text-sm text-center text-muted">Amount</th>
-                    <th class="text-sm text-muted">Transaction Code</th>
-                  </tr>
-                </thead>
-                <tbody id="vouchersTableBody"></tbody>
-              </table>
-            </div>
-
-            <div id="transactionTable" style="display: none">
-              <table class="table table-sm table-bordered table-hover">
-                <thead>
-                  <tr>
-                    <th class="text-sm text-muted">Date</th>
-                    <th class="text-sm text-center text-muted">Status</th>
-                    <th class="text-sm text-center text-muted">Amount</th>
-                    <th class="text-sm text-center text-muted">Check Status</th>
-                  </tr>
-                </thead>
-                <tbody id="transactionTableBody"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+          <input type="hidden" id="amount" name="amount">
+          <input type="hidden" id="token-value" name="token" value="s0bGPkvsE6PA7xTO18kwLrrdn">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submitMobileNumber">Proceed to Payment</button>
       </div>
     </div>
-    -->
-  <div class="modal fade" id="mobileNumberModal" tabindex="-1" aria-labelledby="mobileNumberModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="mobileNumberModalLabel">Online Payment</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Please enter your mobile number</p>
-          <form id="mobileNumberForm">
-            <div class="mb-3">
-              <input type="text" class="form-control" id="mobileNumber" style="letter-spacing:8px" placeholder="e.g.09227823014" required>
-              <div class="invalid-feedback">Please enter a valid mobile number.</div>
-            </div>
-            <input type="hidden" id="amount" name="amount">
-            <input type="hidden" id="token-value" name="token" value="s0bGPkvsE6PA7xTO18kwLrrdn">
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="submitMobileNumber">Proceed to Payment</button>
-        </div>
-      </div>
-    </div>
-  </div> 
-  
-  <script>
-    function validateMobileNumber(number) {
-      const regex = /^09\d{9}$/;
-      return regex.test(number);
-    }
-    function sanitizeInput(input) {
-      return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    }
-    document.querySelectorAll('.card, .pay-button .btn').forEach(element => {
-      element.addEventListener('click', (event) => {
-        event.stopPropagation();
-        const card = element.closest('.card');
-        const amount = card.getAttribute('data-amount');
-        document.getElementById('amount').value = amount;
-        new bootstrap.Modal(document.getElementById('mobileNumberModal')).show();
-      });
+  </div>
+</div>
+
+<script>
+  function validateMobileNumber(number) {
+    const regex = /^09\d{9}$/;
+    return regex.test(number);
+  }
+
+  function sanitizeInput(input) {
+    return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  document.querySelectorAll('.card, .pay-button .btn').forEach(element => {
+    element.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const card = element.closest('.card');
+      const amount = card.getAttribute('data-amount');
+      
+      // Set the hidden input field 'amount' value
+      document.getElementById('amount').value = amount;
+
+      // Display the amount in the modal
+      document.getElementById('modalAmount').textContent = amount;
+
+      // Show the modal
+      new bootstrap.Modal(document.getElementById('mobileNumberModal')).show();
     });
-    document.getElementById('submitMobileNumber').addEventListener('click', () => {
-      const mobileNumberInput = document.getElementById('mobileNumber');
-      const mobileNumber = sanitizeInput(mobileNumberInput.value.trim());
-      if (!validateMobileNumber(mobileNumber)) {
-        mobileNumberInput.classList.add('is-invalid');
-        return;
-      }
-      mobileNumberInput.classList.remove('is-invalid');
-      const amount = document.getElementById('amount').value;
-      const token = document.getElementById('token-value').value;
-      const url = `https://s2.klinternetservices.com/xendit/payment?number=${encodeURIComponent(mobileNumber)}&amount=${encodeURIComponent(amount)}&token=${encodeURIComponent(token)}`;
-      window.location.href = url;
-      bootstrap.Modal.getInstance(document.getElementById('mobileNumberModal')).hide();
-    });
-  </script>
+  });
+
+  document.getElementById('submitMobileNumber').addEventListener('click', () => {
+    const mobileNumberInput = document.getElementById('mobileNumber');
+    const mobileNumber = sanitizeInput(mobileNumberInput.value.trim());
+    if (!validateMobileNumber(mobileNumber)) {
+      mobileNumberInput.classList.add('is-invalid');
+      return;
+    }
+    mobileNumberInput.classList.remove('is-invalid');
+    const amount = document.getElementById('amount').value;
+    const token = document.getElementById('token-value').value;
+    const url = `https://s2.klinternetservices.com/xendit/payment?number=${encodeURIComponent(mobileNumber)}&amount=${encodeURIComponent(amount)}&token=${encodeURIComponent(token)}`;
+    window.location.href = url;
+    bootstrap.Modal.getInstance(document.getElementById('mobileNumberModal')).hide();
+  });
+</script>
+
 </body>
 </html>
