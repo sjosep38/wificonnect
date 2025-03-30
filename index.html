@@ -246,7 +246,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-	  <p><center>You’re about to pay an amount of: ₱</center><span id="modalAmount"></span></p> <!-- This will show the amount -->
+	  <p><center>You’re about to pay an amount of:</center></p> <!-- This will show the amount -->
+	  <p><center><b> ₱<span id="modalAmount"></b></span></p>
 		<br>
 	  <p><center>Please enter your mobile number</center></p>
         <form id="mobileNumberForm">
@@ -259,7 +260,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" id="submitMobileNumber">Proceed to Payment</button>
       </div>
     </div>
